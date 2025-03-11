@@ -13,6 +13,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Encja reprezentująca element w systemie.
+ * Posiada podstawowe pola.
+ */
 @Entity
 @Table(name = "elements")
 @Data

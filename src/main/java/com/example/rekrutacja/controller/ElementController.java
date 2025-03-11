@@ -17,6 +17,10 @@ import reactor.core.publisher.Mono;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Kontroler REST obsługujący operacje na elementach.
+ * Zapewnia endpoint do równoległego zapisu elementów do bazy danych.
+ */
 @RestController
 @RequestMapping("/api/elements")
 @RequiredArgsConstructor
@@ -27,9 +31,8 @@ public class ElementController {
     private final ElementService service;
 
     /**
-     * Metoda odpowiedzialna za zapis elementów równolegle
-     * @param elements Lista elementów podanych w żądaniu
-     * @return
+     * @param elements Lista elementów do zapisania (nie może być pusta)
+     * @return Liczba pomyślnie zapisanych elementów
      */
     @PostMapping
     public Mono<ResponseEntity<Map<String, Integer>>> saveElements(
