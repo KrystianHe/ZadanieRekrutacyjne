@@ -14,7 +14,6 @@ Aplikacja Spring Boot do równoległego zapisu elementów do bazy danych.
 - Walidacja danych wejściowych
 - Równoległy zapis do bazy danych
 - Logowanie operacji
-- Strona główna z dokumentacją API
 
 ## Uruchomienie
 ```bash
